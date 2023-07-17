@@ -1,13 +1,10 @@
 import SkillListItem from "./SkillListItem";
 
-export default function SkillList() {
+export default function SkillList({skills}) {
+    const skillListItems = skills.map((s, idx) => <SkillListItem skill = {s} index = {idx} key={idx} />)
     return (
-        <div>
-            <ul>
-            <SkillListItem />
-            <SkillListItem />
-            <SkillListItem />
-            </ul>
-        </div>
+        <ul>
+            {skillListItems}
+        </ul>
     );
 }

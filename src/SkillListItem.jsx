@@ -1,7 +1,7 @@
-export default function SkillListItem () {
+export default function SkillListItem ({skill}) {
     return (
-        <ul>
-        <li>SkillListItem</li>
+        <ul className="SkillListItem">
+        <li>{skill.name}{skill.level}</li>
         </ul>
     );
 }
