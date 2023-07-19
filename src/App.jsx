@@ -24,12 +24,22 @@ function App() {
     {name: "Python", level: 2}
   ])
 
+  function newSkill(skillFromTheForm){
+    console.log(skillFromTheForm, ' skill From the form'); // this log occurs
+    // when the user hits the form addSkill button
+    setSkillsObj([
+      ...skillsObj, // Spread operator
+       skillFromTheForm// this puts the new user at the end of the array
+     
+    ])
+  } 
+
   return (
   <div>
       <h1>React Dev Skills</h1>
       <SkillList skills ={skillsObj}/>
       <br />
-      <NewSkillForm />
+      <NewSkillForm newSkill={newSkill}/>
   </div>
   )
 }
