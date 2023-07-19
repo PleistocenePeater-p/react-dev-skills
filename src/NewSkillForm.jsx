@@ -41,6 +41,7 @@ export default function NewSkillForm ({newSkill}) {
         <form className="NewSkillForm" onSubmit={handleSubmit}>
             <input 
                 type="text"
+                name="name"
                 placeholder="Skill name"
                 value ={skill.name}
                 onChange={handleChange}
